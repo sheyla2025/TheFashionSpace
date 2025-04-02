@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 180px;
+    background-color: white;
+    font-size: 17px;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color:rgb(32, 32, 116);
+}
+
+.logo .highlight {
+    color: #C8815F;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 24px;
+}
+
+.icons i {
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: url('../images/baw.jpg') center/cover no-repeat;
+    color: white;
+    padding-left: 137px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.hero-content p {
+    width: 397px;
+    margin-bottom: 40px;
+    color: rgb(52, 101, 206);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.shop-now, .new-items {
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.shop-now {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.new-items {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+}
