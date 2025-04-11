@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Fashon Space</title>
+    <title>The Fashion Space</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/inicio.css">
+    <style>
+        .hero-content h1, 
+        .hero-content h2, 
+        .hero-content p {
+            font-weight: bold;
+            color: #ff4081; /* color inicial */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            transition: color 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <!-- Navbar -->
         <header class="navbar">
             <div class="logo">
-                <h1>The Fashon Space <span class="highlight">.</span></h1>
+                <h1>The Fashion Space<span class="highlight"></span></h1>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -37,12 +47,42 @@
             <div class="hero-content">
                 <h2>Los mejores precios en</h2>
                 <h1>Moda al alcance de tus manos</h1>
-                <p>“Lo ultimo en moda al servicio del cliente” - Sheyla Bustamante</p>
+                <p>"Lo ultimo en moda al servicio del cliente" - Sheyla Bustamante</p>
                 <div class="hero-buttons">
                     <button class="shop-now"><a href="../pages/productos.html">Comprar</a></button>
                 </div>
             </div>
         </section>
     </div>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Colores que rotarán en el texto
+            const colors = ['#ff4081', '#ff9800', '#00bcd4', '#4caf50', '#e91e63'];
+            let colorIndex = 0;
+            
+            function changeHeroTextColor() {
+                const heroTexts = document.querySelectorAll('.hero-content h1, .hero-content h2, .hero-content p');
+                
+                // Verificar que hay elementos para cambiar
+                if (heroTexts.length > 0) {
+                    // Cambiar el color de cada elemento
+                    heroTexts.forEach(function(element) {
+                        element.style.color = colors[colorIndex];
+                    });
+                    
+                    // Avanzar al siguiente color
+                    colorIndex = (colorIndex + 1) % colors.length;
+                }
+            }
+            
+            // Ejecutar la función una vez al cargar la página
+            changeHeroTextColor();
+            
+            // Cambiar color cada 2 segundos
+            setInterval(changeHeroTextColor, 2000);
+        });
+    </script>
 </body>
 </html>
